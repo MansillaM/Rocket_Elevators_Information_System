@@ -17,9 +17,10 @@
 			
 
 												<!--input section -->
-					<form name="Rform" style="margin-top: 5% ; margin-left:2% ; margin-right:2%" onchange="residentialMath()" id="resSection" >							
-						
-							<div class="row">
+							<%= form_with url:quote_path, id:"fields", local:true, method: :post do %>		
+
+
+							<div class="row" oninput="residentialMath()">
 								<div class="col-md-4 res reset"  style="display: none" id="number-of-apartments">
 									<label >Nº Apparments In the building</label>
 									<input type="number" class="form-control resetv" id="Rnumber-of-apartments" min="0">
@@ -76,7 +77,7 @@
 							
 						
 										<!--tier secletion-->
-						<div class="row" >
+						<div class="row" onchange="residentialMath()">
 							<div class="col-md-4 res cor com hyb reset " style="display: none">
 								<label for="contact:name">Standard</label>
 								<input type="radio" name="Rtier" value="Standard" id="Rstandard" checked>
@@ -120,8 +121,10 @@
 							</div>	
 
 						</div>
-			</form>
 
+						 <%= submit_tag "Submit", class:"btn btn-primary" %>
+
+									<% end %>
 
 						
 						
