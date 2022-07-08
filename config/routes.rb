@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'pages#home'
   resources :quotes
+  resources :leads
   get 'pages/back'
   get 'pages/residential'
   get 'pages/commercial'
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
   get 'quote', to: 'pages#quote'
   get '/quote/new', to: 'quote#new'
   post '/quote', to: 'quote#create'
+  get '/lead/new', to: 'leads#new'
+  post '/lead', to: 'lead#create'
   get 'admin', to: 'pages#admin'
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

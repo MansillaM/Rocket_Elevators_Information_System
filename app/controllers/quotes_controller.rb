@@ -1,11 +1,11 @@
 class QuotesController < ApplicationController
   def create 
     @quotes = Quote.new(quote_params)
+    
     if @quotes.save
       flash[:notice] = 'Quote created successfully'
       redirect_to pages_quote_url action: :new
-    else
-      render :new 
+   
     end
   end
 
