@@ -13,15 +13,22 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: root
-  host: 127.0.0.1
+  username: codeboxx
+  password: Codeboxx1!
+  host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
   # socket: /var/run/mysqld/mysqld.sock
-  database: rocket_elevators_db
+  database: MatiasMansilla
 
 development:
   <<: *default
-  database: rocket_peterpan
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: codeboxx
+  password: Codeboxx1!
+  host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
+  # socket: /var/run/mysqld/mysqld.sock
+  database: MatiasMansilla
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

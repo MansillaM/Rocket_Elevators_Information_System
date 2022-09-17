@@ -60,6 +60,7 @@ group :development do
   gem 'capistrano3-puma', github: "seuros/capistrano-puma"
   gem 'ed25519', '>= 1.2', '< 2.0'
   gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
+  gem 'capistrano-rvm',     require: false
 end
 
 group :test do
@@ -85,7 +86,6 @@ gem 'jquery-ui-rails'
 
 gem 'faker', '~> 2.21'
 
-source 'https://rubygems.org'
 
 gem 'rake'
 
